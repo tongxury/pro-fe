@@ -1,0 +1,23 @@
+export const DOMAINS = [
+    {label: "美食", value: "美食", fixed: true},
+    {label: "搞笑", value: "搞笑", fixed: true},
+    {label: "绘画", value: "绘画", fixed: true},
+    {label: "读书", value: "读书", fixed: true},
+    {label: "文化", value: "文化", fixed: true},
+    {label: "直播", value: "直播", fixed: true},
+    {label: "明星", value: "明星", fixed: true},
+    {label: "影视", value: "影视", fixed: true},
+    {label: "科学科普", value: "科学科普", fixed: true},
+    {label: "音乐", value: "音乐", fixed: true},
+    {label: "健身塑型", value: "健身塑型", fixed: true},
+    {label: "短剧", value: "短剧", fixed: true},
+    {label: "家居家装", value: "家居家装", fixed: true},
+    {label: "游戏", value: "游戏", fixed: true},
+    {label: "户外", value: "户外", fixed: true},
+    {label: "穿搭", value: "穿搭", fixed: true},
+    {label: "汽车", value: "汽车", fixed: true},
+    {label: "手工", value: "手工", fixed: true},
+    {label: "职场", value: "职场", fixed: true},
+    {label: "旅行", value: "旅行", fixed: true},
+    {label: "学习", value: "学习", fixed: true}
+];

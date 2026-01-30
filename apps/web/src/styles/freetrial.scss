@@ -1,0 +1,173 @@
+.middle-page {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  //padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  background: url("../assets/borading-1.jpg") no-repeat center;
+  align-items: center;
+
+  .gift {
+    width: 447px;
+    height: 626px;
+    border-radius: 20px;
+    /* background: #fff; */
+    background: url("../assets/11.png") no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 30px 0px rgba(175, 197, 255, 0.57);
+    margin-right: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+      width: 252px;
+      margin-bottom: 34px;
+    }
+
+    .text {
+      text-align: center;
+      font-family: Nunito-Black;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 50px; /* 104.167% */
+      background: var(
+                      --Gradient-red-font,
+                      linear-gradient(170deg, #ff0852 -49.07%, #ff90b1 92.3%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .days {
+      color: #000;
+      text-align: center;
+      font-family: Nunito-Black;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 36px; /* 112.5% */
+    }
+
+    .claim {
+      margin-top: 23px;
+      margin-bottom: 17px;
+      cursor: pointer;
+      flex-shrink: 0;
+      color: #fff;
+      font-family: "SF Pro Rounded";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      width: 319px;
+      height: 79.82px;
+      flex-shrink: 0;
+      border-radius: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(52deg, #042cff 20.51%, #00d1ff 87.35%);
+    }
+
+    .skip {
+      cursor: pointer;
+      color: var(--Gray, #a5bbd0);
+      text-align: center;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #a5bbd0;
+        margin-top: 6px;
+      }
+    }
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 两列等份 */
+    row-gap: 42px; /* 在垂直方向上无间距 */
+    column-gap: 56px; /* 在水平方向上有间距 */
+    height: 626px;
+
+    .item {
+      position: relative;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0px 0px 30px 0px rgba(175, 197, 255, 0.57);
+      padding: 12px 32px 12px 32px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+
+      .title {
+        font-family: Nunito-Black;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        background: var(
+                        --blue,
+                        linear-gradient(21deg, #042cff 20.25%, #00d1ff 89.83%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 278px;
+          height: 1px;
+          background-color: #0386ff;
+          margin-top: 4px;
+        }
+      }
+
+      .desc {
+        margin-top: 4px;
+        width: 272px;
+        word-break: break-word;
+        color: var(--blue2, #0386ff);
+        font-family: Nunito-Medium;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 500;
+        /* line-height: 28px;  */
+      }
+
+      .icon {
+        position: absolute;
+        right: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        box-shadow: 0px 0px 30px 0px rgba(175, 197, 255, 0.57);
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

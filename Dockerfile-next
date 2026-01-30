@@ -1,0 +1,32 @@
+FROM --platform=linux/amd64 usernx/next-env:latest
+#
+## 创建非 root 用户
+#RUN addgroup --system --gid 1001 nodejs
+#RUN adduser --system --uid 1001 nextjs
+
+# 设置工作目录
+WORKDIR /app
+
+# 设置环境变量
+ARG APP_ENV
+ARG REPO
+ENV APP_ENV ${APP_ENV}
+ENV REPO ${REPO}
+
+# 复制必要的文件
+COPY apps/${REPO}/next.config.mjs .
+COPY apps/${REPO}/package.json .
+
+# 安装 sharp
+#RUN npm install sharp
+
+# 复制已经构建好的文件
+COPY --chown=nextjs:nodejs apps/${REPO}/.next/standalone ./
+COPY --chown=nextjs:nodejs apps/${REPO}/.next/static ./apps/${REPO}/.next/static
+COPY --chown=nextjs:nodejs apps/${REPO}/public ./apps/${REPO}/public
+
+# 切换到非 root 用户
+USER nextjs
+
+# 启动命令
+CMD HOSTNAME="0.0.0.0" PORT=8080 node /app/apps/$REPO/server.js

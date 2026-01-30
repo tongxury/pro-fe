@@ -1,0 +1,200 @@
+.home{
+  h3{
+    padding: 0;
+    margin: 0;
+  }
+  p{
+    margin: 0;
+    padding: 0;
+  }
+  h2{
+    margin: 0;
+    padding: 0;
+  }
+  h1{
+    color: var(--grayblue-800);
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 68px;
+    text-align: center;
+    margin: 0;
+  }
+  .btnGroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // width: 220px;
+    gap: 40px;
+    margin: 0 auto 0;
+    animation: breath 2s ease-in-out infinite;
+    .btnGroupItem {
+      padding: 0 20px;
+      gap: 20px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-family: Inter;
+      justify-content: center;
+      height: 56px;
+      flex: 1;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .video{
+    width: 950px;
+    margin: 0 auto;
+    position: relative;
+    .web{
+      width: 100%;
+      border-radius: 12px;
+      height: auto;
+      box-shadow: 0 12px 80px 0 rgba(104, 65, 234, .3), 0 2px 6px 0 rgba(104, 65, 234, .15);
+      transition: opacity .8s;
+    }
+    .mobile{
+      height: auto;
+      position: absolute;
+      width: 45%;
+      top: 7.1%;
+      border-radius: 12px;
+      right: -100px;
+      box-shadow: 0 12px 80px 0 rgba(104, 65, 234, .3), 0 2px 6px 0 rgba(104, 65, 234, .15);
+      z-index: 4;
+      object-fit: cover;
+    }
+  }
+  .title{
+    padding: 0;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 56px;
+    text-align: center;
+    flex: 1;
+    white-space: pre-line;
+    margin-top: 100px;
+  }
+  .overview{
+    margin: 0 auto;
+    border: 1px solid var(--transparent-black-5);
+    border-radius: 24px;
+    background-color: var(--grayblue-50);
+    padding: 64px;
+    box-sizing: border-box;
+    transition: all .3s;
+    .icon{
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      border-radius: 10.29px;
+      background-color: #f0ebff;
+      color: #6841ea;
+    }
+    .overviewTextBox{
+      .overviewTitle{
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        color: var(--grayblue-800);
+      }
+      .overviewSubTitle{
+        font-size: 16px;
+        color: var(--grayblue-600);
+        line-height: 24px;
+      }
+    }
+  }
+  .slickPrev{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    cursor: pointer;
+    user-select: none;
+    width: 48px;
+    height: 48px;
+    background-color: var(--common-white);
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid var(--transparent-black-5);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .slickNext{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    cursor: pointer;
+    user-select: none;
+    width: 48px;
+    height: 48px;
+    background-color: var(--common-white);
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid var(--transparent-black-5);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .addToChrome{
+    padding: 100px 0;
+    background-color: #add8e6;
+    border-radius: 24px;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(../../assets/UnleashBackground.png);
+    h2{
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 56px;
+      text-align: center;
+    }
+  }
+  .container{
+    width: 1200px; 
+    margin: 0 auto;
+  }
+  @media (max-width: 1280px) {
+    .container {
+        width: calc(100% - 80px);
+        margin: 0 40px;
+    }
+  }
+  @media (max-width: 1280px) {
+    .video{
+      width: calc(100% - 250px);
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 780px) {
+    .container {
+      width: calc(100% - 48px);
+      margin: 0 24px;
+    }
+      .video{
+        width: calc(100% - 250px);
+        margin: 0 auto;
+      }
+  }
+}
+
+/* 定义呼吸动画 */
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

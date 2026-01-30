@@ -1,0 +1,27 @@
+name: Deploy
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to staging
+        uses:  appleboy/ssh-action@master
+        with:
+          host: ${{ vars.REMOTE_HOST }}
+          username: root
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd /root/deploy/mgmt-web
+            git checkout .
+            git checkout dev
+            git pull
+            yarn deploy:staging

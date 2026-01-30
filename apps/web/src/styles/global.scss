@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  --common-white: #fff;
+  --common-black: #000;
+  --text-title: #232329;
+  --text-secondary: #8a939d;
+  --text-body: #545c66;
+  --text-link: #1e6fff;
+  --text-disable: #c0c5cc;
+  --icon-disable: #dadee3;
+  --border-light: rgba(79,89,102,.08);
+  --bg-lv1: #f5f5f5;
+  --bg-lv3: #f9fafb;
+  --transparent-white-32: hsla(0,0%,100%,.32);
+  --transparent-white-40: hsla(0,0%,100%,.4);
+  --transparent-white-45: hsla(0,0%,100%,.45);
+  --transparent-white-65: hsla(0,0%,100%,.65);
+  --transparent-black-5: rgba(0,0,0,.05);
+  --transparent-black-15: rgba(0,0,0,.15);
+  --transparent-black-25: rgba(0,0,0,.25);
+  --transparent-black-30: rgba(0,0,0,.3);
+  --transparent-black-32: rgba(0,0,0,.32);
+  --transparent-black-40: rgba(0,0,0,.4);
+  --transparent-black-45: rgba(0,0,0,.45);
+  --transparent-black-55: rgba(0,0,0,.55);
+  --transparent-black-65: rgba(0,0,0,.65);
+  --transparent-black-85: rgba(0,0,0,.85);
+  --primaryblue-25: #fafcff;
+  --red-900: #420505;
+  --red-800: #761212;
+  --red-700: #c61f1e;
+  --red-600: #e02423;
+  --red-500: #ea3639;
+  --red-400: #ff4747;
+  --red-300: #ff7271;
+  --red-200: #ffa4a3;
+  --red-100: #ffcccb;
+  --red-50: #fee;
+  --red-25: #fff7f7;
+  --brand-900: #15044c;
+  --brand-800: #220876;
+  --brand-700: #3818a1;
+  --brand-500: #522bd6;
+  --brand-400: #6841ea;
+  --brand-300: #9373ff;
+  --brand-200: #b8a3fb;
+  --brand-100: #dfd5fe;
+  --brand-50: #f0ebff;
+  --brand-25: #fcfbfe;
+  --grayblue-900: #191e24;
+  --grayblue-800: #20262e;
+  --grayblue-700: #3c434d;
+  --grayblue-600: #545c66;
+  --grayblue-500: #858e99;
+  --grayblue-400: #c0c5cc;
+  --grayblue-300: #dadee3;
+  --grayblue-200: #ebeef2;
+  --grayblue-100: #f4f6f8;
+  --grayblue-50: #f9fafb;
+  --grayblue-8: #eff0f1;
+  --transparent-grayblue-8: rgba(79,89,102,.08);
+  --transparent-grayblue-12: rgba(79,89,102,.12);
+  --transparent-grayblue-16: rgba(79,89,102,.16);
+  --transparent-grayblue-65: rgba(79,89,102,.65);
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #f4f6f8;
+  --gray-400: #c2c2c2;
+  --gray-500: #8c8c8c;
+  --gray-600: #595959;
+  --gray-800: #242424;
+  --gray-900: #1a1a1a;
+  --transparent-gray-500-24: rgba(145,158,171,.24);
+  --transparent-brand-8: rgba(104,65,234,.08);
+  --indigoblue-400: #546dfe;
+  --green-400: #00aa5b;
+  --yellow-300: #ffcd00;
+  --yellow-400: #ffab00;
+  --box-shadow-s1: 0px 1px 20px 0px rgba(0,0,0,.04);
+  --box-shadow-s2: 0px 8px 40px 0px rgba(0,0,0,.08),0px 0px 1px 0px rgba(0,0,0,.08);
+  --box-shadow-s3: 0px 12px 40px -4px rgba(0,0,0,.14),0px 0px 2px 0px rgba(0,0,0,.08);
+  --light-brand-400: #6841ea;
+  --light-grayblue-800: #20262e;
+  --mobile-on-light-paper: linear-gradient(100deg,#edf1ff 10.26%,#f7e9ff 97.75%);
+  color: #212b36;
+  font-weight: 400;
+  overflow-y: overlay;
+  overflow-y: overlay!important;
+  text-align: left;
+  -webkit-user-select: text;
+  user-select: text
+}
+
+@font-face {
+  font-family: "Nunito-Black";
+  src: /* url("../assets/fonts/Nunito-Black.ttf") format("truetype"), */
+          url("../assets/fonts/Nunito-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-BlackItalic";
+  src: url("../assets/fonts/Nunito-BlackItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../assets/fonts/Nunito-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-BoldItalic";
+  src: url("../assets/fonts/Nunito-BoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-ExtraBold";
+  src: url("../assets/fonts/Nunito-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-ExtraBoldItalic";
+  src: url("../assets/fonts/Nunito-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-ExtraLight";
+  src: url("../assets/fonts/Nunito-ExtraLight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-ExtraLightItalic";
+  src: url("../assets/fonts/Nunito-ExtraLightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Italic";
+  src: url("../assets/fonts/Nunito-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Light";
+  src: url("../assets/fonts/Nunito-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-LightItalic";
+  src: url("../assets/fonts/Nunito-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Medium";
+  src: url("../assets/fonts/Nunito-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-MediumItalic";
+  src: url("../assets/fonts/Nunito-MediumItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("../assets/fonts/Nunito-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-SemiBold";
+  src: url("../assets/fonts/Nunito-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-SemiBoldItalic";
+  src: url("../assets/fonts/Nunito-SemiBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:where(button).ant-btn{
+  height: 40px;
+}
+
+.fade-enter {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.5s linear;
+}
+.ant-upload-wrapper {
+  display: flex;
+}

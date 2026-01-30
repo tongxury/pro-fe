@@ -1,0 +1,28 @@
+/* Base theme */
+.bn-container[data-theming-css-variables-demo][data-color-scheme] {
+  --bn-colors-editor-text: #000;
+  --bn-colors-editor-background: #fff;
+  --bn-colors-menu-text: #000;
+  --bn-colors-menu-background: #fff;
+  --bn-colors-tooltip-text: #000;
+  --bn-colors-tooltip-background: #fff;
+  --bn-colors-hovered-text: #000;
+  --bn-colors-hovered-background: #0386FF;
+  --bn-colors-selected-text: #000;
+  --bn-colors-selected-background: #fff;
+  --bn-colors-disabled-text: #9b0000;
+  --bn-colors-disabled-background: #fff;
+  --bn-colors-shadow: #640000;
+  --bn-colors-border: #870000;
+  --bn-colors-side-menu: #bababa;
+  --bn-color-highlight-colors: #ffffff;
+  --bn-border-radius: 0px;
+  --bn-font-family: Helvetica Neue, sans-serif;
+}
+
+/* Changes for dark mode */
+/*.bn-container[data-theming-css-variables-demo][data-color-scheme="dark"] {*/
+/*  --bn-colors-editor-text: #ffffff;*/
+/*  --bn-colors-editor-background: #9b0000;*/
+/*  --bn-colors-side-menu: #ffffff;*/
+/*}*/

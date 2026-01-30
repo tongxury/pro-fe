@@ -1,0 +1,120 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  padding: 12px 120px;
+  box-sizing: border-box;
+  gap: 18px;
+  &.active{
+    background: rgba($color: #fff, $alpha: 0.8);
+    backdrop-filter: blur(6px);
+  }
+  .login {
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: Nunito-Regular;
+    color: var(--grayblue-800);
+    padding: 5px 10px;
+    font-family: Inter;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+    &:hover{
+      background: var(--transparent-grayblue-8);
+      color: var(--brand-500);
+    }
+  }
+  .logo {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+  }
+
+  .right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .join {
+      width: 170px;
+      height: 40px;
+      flex-shrink: 0;
+      border-radius: 25px;
+      border: 1px solid var(--blue2, #0386ff);
+      color: var(--blue2, #0386ff);
+      text-align: center;
+      font-family: Nunito-Bold;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .joinSvg {
+        margin-right: 10px;
+        width: 20px;
+      }
+
+
+      &:hover {
+        background-color: #0386ff;
+        color: #fff;
+      }
+    }
+
+
+    .add {
+      margin-left: 16px;
+      margin-right: 16px;
+      border-radius: 25px;
+      background: var(
+                      --blue,
+                      linear-gradient(21deg, #042cff 20.25%, #00d1ff 89.83%)
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 11px 23px 11px 16px;
+      color: var(--white, #fff);
+      text-align: center;
+      font-family: Nunito-Black;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 18px; /* 100% */
+      letter-spacing: 0.6px;
+      cursor: pointer;
+
+
+      .addImage {
+        margin-right: 12px;
+        width: 15px;
+        height: 15px;
+      }
+
+      &:hover {
+        background: var(--blue2, #0386ff);
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .header {
+      gap: 18px;
+      padding: 12px 20px;
+  }
+}

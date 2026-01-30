@@ -1,0 +1,64 @@
+.home-footer {
+  height: 314px;
+  width: 100%;
+  //background-image: url("../assets/home-bg-10.png");
+  background-size: cover;
+  padding: 16px 0 16px 92px;
+  display: flex;
+  overflow: hidden;
+  .introduce{
+    margin-top: 20px;
+  }
+  .part-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: Nunito-Bold;
+  }
+
+  .part-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-family: Nunito-Regular;
+  }
+
+  .footer-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .revolutionizing {
+      display: flex;
+      flex-direction: column;
+      margin-top: 90px;
+
+      .footer-logoSvg {
+        width: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .icons {
+        margin-top: 26px;
+
+        a {
+          display: inline-block;
+          width: 36px;
+          height: 36px;
+          margin-right: 20px;
+          color: rgb(17, 17, 17);
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      flex: 1;
+      padding-top: 56px;
+      justify-content: flex-end;
+    }
+  }
+}

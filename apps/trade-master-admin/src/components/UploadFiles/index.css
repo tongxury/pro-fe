@@ -1,0 +1,13 @@
+.limit-size{
+    color: #5a6cab;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    /* 112.5% */
+    margin-top: 12px;
+}
+.supported.ant-upload-text{
+    font-size: 12px!important;
+}

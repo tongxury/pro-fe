@@ -1,0 +1,243 @@
+.onboarding {
+  width: 100%;
+  height: 100vh;
+
+  padding-top: 60px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.boarding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../assets/borading-1.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  .desc {
+    width: 424px;
+    color: var(--black, #000);
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    word-break: break-all;
+    margin-right: 30px;
+
+    .blue {
+      color: var(--blue2, #0386ff);
+    }
+  }
+
+  .keyboard {
+    width: 868px;
+    height: 496px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* 样式自定义 */
+.fullpage {
+  height: 100vh;
+  overflow-y: scroll;
+  padding-top: 104px;
+  background: url("../assets/boarding-3.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+
+  .swiper-boarding-item {
+    margin-bottom: 40px;
+
+    h1 {
+      color: #000;
+      font-family: Inter;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      margin-bottom: 10px;
+      padding-left: 28px;
+    }
+
+    h2 {
+      color: #000;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 15px;
+
+      &.mb-0 {
+        margin-bottom: 0;
+
+        .blue {
+          color: var(--blue2, #0386ff);
+        }
+      }
+    }
+
+    .padding-left {
+      padding-left: 32px;
+
+      h2 {
+        word-break: break-all;
+      }
+
+      ._blank {
+        color: #0386ff;
+        text-decoration: underline;
+
+        &:hover {
+          color: #0386ff;
+        }
+      }
+
+      video {
+        border-radius: 15px;
+        max-width: 100%;
+      }
+
+      .following {
+        margin-top: 26px;
+      }
+    }
+
+    .swiper-boarding-img {
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &.mt_30 {
+        margin-top: 30px;
+      }
+
+      &.mb-54 {
+      }
+    }
+
+    .swiper-boarding-hover {
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(5.650000095367432px);
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 19px 21px 27px 25px;
+      color: var(--Text-text-primary, #333);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.25px;
+    }
+  }
+}
+
+.pagination {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination li {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue2, #0386ff);
+  margin-bottom: 24px;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  background-image: url("../assets/number_bgc.png");
+  background-size: cover;
+
+  /* 108.333% */
+  &:hover {
+    background-image: url("../assets/number-button.png");
+    color: #fff;
+    width: 55px;
+    height: 55px;
+  }
+
+  &.active {
+    background-image: url("../assets/number-button.png");
+    color: #fff;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .boarding {
+
+
+    .desc {
+      width: auto;
+      font-size: 36px;
+    }
+
+    .keyboard {
+      width: auto;
+      height: 350px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .boarding {
+
+
+    .desc {
+      width: auto;
+      font-size: 36px;
+    }
+
+    .keyboard {
+      width: auto;
+      height: 350px;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+import {useXTheme, XFlex, XText, XTextTabs} from "@pro/ui";
+import {addQuickSession, listItems} from "@/api/api";
+import {useInfiniteScroll} from "ahooks";
+import {useMemo, useRef, useState} from "react";
+import {Col, Input, List, Row, Select, Skeleton, Tabs} from "antd";
+import ItemView from "@/components/Item/ItemView";
+import {useRouter} from "@/hooks/useRouter";
+import {useSearchParams} from "react-router";
+
+const Leaderboard = () => {
+
+    const {themeVars} = useXTheme();
+
+    const categories = [
+        {label: '全部', value: 'all',},
+        {label: '财经', value: '财经',},
+        {label: 'AI', value: 'AI',},
+        {label: '大健康', value: '大健康',},
+        {label: '职场', value: '职场',},
+        {label: '情感', value: '情感',},
+        {label: '科技数码', value: '科技数码',},
+        {label: '家居', value: '家居',},
+        {label: '美食', value: '美食',},
+        {label: '母婴育儿', value: '母婴育儿',},
+        {label: '医美护肤', value: '医美护肤',},
+        {label: '珠宝', value: '珠宝',},
+        {label: '移民留学', value: '移民留学',},
+        {label: '财富保险', value: '财富保险',},
+        {label: '房地产', value: '房地产',},
+
+    ]
+
+
+    const [searchParams, setSearchParams] = useSearchParams()
+
+    const category = useMemo(() => searchParams?.get('category'), [searchParams])
+
+    // const [category, setCategory] = useUr(categories[0].value)
+
+    const ref = useRef<HTMLDivElement>(null);
+
+    const router = useRouter()
+
+    const {data, loading, loadMore, loadingMore, noMore} = useInfiniteScroll<any>(
+        (d) => listItems({category: category === 'all' ? '' : category, page: (d?.page || 0) + 1}).then(r => r.data),
+        {
+            target: ref,
+            threshold: 300,
+            isNoMore: (d) => !d?.hasMore,
+            // manual: true
+            reloadDeps: [category]
+        }
+    );
+
+
+    const [reportLoadingItemId, setReportLoadingItemId] = useState(undefined);
+
+    const onViewReport = (item: any) => {
+
+        if (reportLoadingItemId) return;
+
+        setReportLoadingItemId(item._id);
+
+        addQuickSession({itemId: item._id}).then(result => {
+            if (!result.code && result?.data?._id) {
+                router.push(`/scenes/analysis/sessions/${result?.data?._id}`);
+            } else {
+                setReportLoadingItemId(undefined);
+            }
+        })
+    }
+
+    if (loading && !data) {
+        return <div ref={ref} style={{overflowY: 'scroll', padding: 10}}>
+            <Row gutter={[10, 10]}>
+                {[1, 1, 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]?.map((x: any, index: number) => {
+                    return <Col key={index} xs={12} sm={12} md={12} lg={6} xl={4}>
+                        <Skeleton.Button active block style={{height: 200, borderRadius: 8}}/>
+                    </Col>
+                })}
+            </Row>
+        </div>
+    }
+    return <XFlex vertical style={{height: '100%'}}>
+        <Tabs style={{paddingInline: 15}} activeKey={category}
+              items={categories?.map(x => ({key: x.value, label: x.label}))}
+              onChange={(key) => setSearchParams(prev => ({...prev, category: key}))}/>
+
+        <Row gutter={[10, 10]} ref={ref} style={{overflowY: 'scroll', maxHeight: `calc(100vh - 140px)`, padding: 10, height: '100%'}}>
+            {data?.list?.map((x: any, index: number) => {
+                return <Col key={index} xs={12} sm={12} md={12} lg={6} xl={4}>
+                    <ItemView data={x} onViewReport={() => onViewReport(x)}
+                              reportLoadingItemId={reportLoadingItemId}/>
+                </Col>
+            })}
+        </Row>
+    </XFlex>
+}
+
+export default Leaderboard;

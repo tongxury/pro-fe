@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  veogo-web:
+    image: usernx/veogo-web:latest
+    pull_policy: 'always'
+    restart: always
+    ports:
+      - '80:8080'
+

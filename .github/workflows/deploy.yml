@@ -1,0 +1,28 @@
+name: Deploy
+on:
+    push:
+        branches: ["xxxx"]
+    pull_request:
+        branches: ["xxxx"]
+
+permissions:
+    contents: read
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy to staging
+              uses: appleboy/ssh-action@master
+
+              with:
+                  host: ${{ vars.REMOTE_HOST }}
+                  username: root
+                  password: ${{ secrets.SSH_PASSWORD }}
+                  script: |
+                      cd /root/code/pro-fe
+                      git checkout .
+                      git pull
+                      git log -1
+                      nvm use 20
+                      yarn deploy:prod

@@ -1,0 +1,33 @@
+/* tslint:disable */
+/* eslint-disable */
+
+import React, { CSSProperties, SVGAttributes, FunctionComponent } from 'react';
+import { getIconColor } from './helper';
+
+interface Props extends Omit<SVGAttributes<SVGElement>, 'color'> {
+  size?: number;
+  color?: string | string[];
+}
+
+const DEFAULT_STYLE: CSSProperties = {
+  display: 'block',
+};
+
+const IconGroupFill: FunctionComponent<Props> = ({ size, color, style: _style, ...rest }) => {
+  const style = _style ? { ...DEFAULT_STYLE, ..._style } : DEFAULT_STYLE;
+
+  return (
+    <svg viewBox="0 0 1024 1024" width={size + 'px'} height={size + 'px'} style={style} {...rest}>
+      <path
+        d="M85.333333 938.666667a341.333333 341.333333 0 1 1 682.666667 0H85.333333z m341.333334-384c-141.44 0-256-114.56-256-256s114.56-256 256-256 256 114.56 256 256-114.56 256-256 256z m314.154666 95.274666A320.213333 320.213333 0 0 1 980.608 938.666667H853.333333c0-111.36-42.666667-212.736-112.512-288.725334z m-86.314666-97.109333A340.48 340.48 0 0 0 768 298.666667a339.797333 339.797333 0 0 0-43.306667-166.528A213.333333 213.333333 0 0 1 896 341.333333a213.290667 213.290667 0 0 1-241.493333 211.498667z"
+        fill={getIconColor(color, 0, '#333333')}
+      />
+    </svg>
+  );
+};
+// @ts-ignore
+IconGroupFill.defaultProps = {
+  size: 18,
+};
+
+export default IconGroupFill;

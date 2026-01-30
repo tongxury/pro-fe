@@ -1,0 +1,165 @@
+export default {
+    Difference: {
+        "Difference between ChatGPT and": "Difference between ChatGPT and {appName}",
+        chat: "Chat",
+        features: "Features",
+        "All in one Al chatbot": "All in one Al chatbot",
+        "Web Access": "Web Access",
+        "Quick Action & Quick Compose": "Quick Action & Quick Compose",
+        reading: "Reading",
+        "Webpage & PDF & Youtube summary": "Webpage & PDF & Youtube summary",
+        "Image Reading": "Image Reading",
+        search: "Search",
+        "Search Agent": "Search Agent",
+        "Search Enhance": "Search Enhance",
+        translator: "Translator",
+        "Web Translation": "Web Translation",
+        "Document Translation": "Document Translation",
+        writing: "Writing",
+        "Writing Agent & Email Reply": "Writing Agent & Email Reply"
+    },
+    Home: {
+        "Difference between ChatGPT and": "Difference between ChatGPT and {appName}",
+        title: "All-in-One AI Assistant - Personal, Fast & Free",
+        subtitle:
+            "{appName} is your all-in-one AI assistant capable of helping with conversations, searches, writing, and translations, You need me to enhance your work and study efficiency.",
+        "all-in-one ai assistant": "All-in-One AI Assistant",
+        "useful everywhere": "Useful Everywhere",
+        "AI Sidebar": "AI Sidebar",
+        "add to chrome": "Add to Chrome",
+        "available on all platforms": "Available on All Platforms",
+        "one-click to access all ai features from any web page":
+            "One-click to access all AI features from any web page.",
+        "chat with your favorite assistant from browser, desktop and mobile phone":
+            "Chat with your favorite assistant from browser, desktop and mobile phone.",
+        "smart toolbar": "Smart Toolbar",
+        "seamlessly explain, translate or summarize any text you select":
+            "Seamlessly Explain, Translate or Summarize any text you select.",
+        "writing assistant": "Writing Assistant",
+        "draft, rewrite or improve text content on any web page":
+            "Draft, rewrite or improve text content on any web page.",
+        "works for professionals": "Works For Professionals",
+        "they love": "They Love {appName}",
+        "frequently asked questions": "Frequently Asked Questions",
+        "unlock your true potential": "Unlock your true potential, get {appName} now.",
+        comments: "Comments"
+    },
+    Pricing: {
+        supports: "Destek",
+        "energize your academic level with": "Eğitim seviyenizi {name} ile enerjilendirin ",
+        "subscribe now to secure Early Bird Pricing before it increases soon!":
+            "Hemen abone olun, fiyatlar yakında artmadan önce Erken Kuş Fiyatlarını garanti altına alın!",
+        annually: "Yıllık",
+        quarterly: "Üç aylık",
+        monthly: "Aylık",
+        save: "Tasarruf et {save}",
+        "Sign in to subscribe": "Abone olmak için giriş yap",
+        "benefits per month": "Aylık Faydalar",
+        "advanced function": "Gelişmiş Fonksiyon",
+        "advanced function trial": "Gelişmiş Fonksiyon",
+        queries: "sorguları",
+        webAccess: "Web Erişimi",
+        literatureSearch: "Edebiyat araştırması",
+        chatDocument: "Sohbet Belgesi",
+        chatImage: "Sohbet görüntüsü",
+        testPaper: "Test kağıdı",
+        writingGuide: "Yazım Kılavuzu",
+        chatVideo: "Video Özeti",
+        emailCopilot: "E-posta Yardımcısı",
+        "powerful models": "Güçlü Modeller",
+        subscribe: "Abone ol",
+        loading: "Yükleniyor",
+        "this plan will renew on": "Bu plan yenilenecek",
+        "manage billing": "Fatura yönetimi",
+        and: "ve",
+        "start 7 day free trial": "7 günlük ücretsiz denemeye başlayın.",
+        "exclusive member features": "Özel üye özellikleri",
+        "most popular model with fast response speed": "Hızlı yanıt hızıyla en popüler model",
+        "most powerful model with incomparable capabilities": "Karşılaştırılamaz yeteneklere sahip en güçlü model",
+
+        "enable AI to analyze your course documents to provide answers":
+            "Yapay zeka kurs belgelerinizi analiz edip cevaplar sunmasına izin verin",
+        "enable AI to analyse your learning material to provide test paper":
+            "Öğrenme materyalinizi analiz etmek ve bir sınav kağıdı sağlamak için yapay zekayı etkinleştirin",
+        "enable AI to analyse your writing task to provide writing guide": `Yazı görevinizi analiz etmek ve yazı rehberi sağlamak için AI'ı etkinleştir`,
+        "enable AI to provide accurate summary of online video content":
+            "Yapay zekanın çevrimiçi video içeriğinin doğru bir özetini sunmasına izin vermek",
+        "enable AI to analyze intent of email and provide quick reply":
+            "Ağ bilgilerine dayalı olarak AI'yi etkinleştir",
+        "the most widely used GPT-4 and GPT35 are both supported":
+            "En yaygın kullanılan GPT-4 ve GPT3.5 her ikisi de desteklenmektedir",
+        unlimited: "Sınırsız",
+        "day free trial": "{days} günlük ücretsiz deneme",
+        "price after trial": `Deneme süresinden sonra ayda {price} USD`,
+        "signed up before": "Sadece {date} tarihinden önce kaydolan kullanıcılar için",
+        "Start free trial": "{days}-günlük ücretsiz deneme başlat",
+        "offer end in": "Teklif {days} {date} {hours}:{minutes}:{seconds} içinde sona erer",
+        "$0 payment today": "Bugün 0 TL ödeme",
+        "Other Benefits": "Diğer avantajlar",
+        notification:
+            "XTips Planı hala test aşamasındadır ve gelecekte OpenAI ve Anthropic gibi diğer şirketlerin kurallarına göre değişebilir. XTips Planında herhangi bir değişiklik olursa, uygulama içi mesajlar aracılığıyla sizi bilgilendireceğiz ve hemen fiyatlandırma sayfasını ve web sitesini güncelleyeceğiz. XTips hesapları yalnızca bireysel kullanım içindir ve herhangi bir insan olmayan/robot kullanımı veya çoklu kullanıcı sorunları hesap askıya alınmasına neden olabilir. E-posta desteğine ihtiyacınız varsa, lütfen  adresine e-posta gönderin ",
+        "subscribed successfully": "Başarıyla abone olundu",
+        "try it now": "Şimdi Deneyin",
+        "current plan": "Mevcut plan",
+        "use GPT4 queries": "GPT4 sorgularını kullanma",
+        year: "yıl",
+        month: "ay",
+        day: "gün",
+        "Save 25% (pay 9 mos, get 12 mos)": "%25 tasarruf edin (9 ay öde, 12 ay alın)",
+        "Advanced Model": 'Gelişmiş Model"',
+        "More queries_desc":
+            "Size en iyisini sunuyoruz: " + "GPT-4: {gpt4Times} Sorgu/ay" + "GPT-3.5: {gpt35Times} Sorgu/ay",
+        "Empower AI to recognize images and tables and answer your inquiries":
+            "Yapay zekaya görüntü ve tabloları tanıma yetkisi verin ve sorularınıza cevap versin",
+        "Submit your document and get detailed analysis from key points":
+            "Belgenizi gönderin ve önemli noktalardan detaylı bir analiz alın.",
+        "Generate customized practice exams from your coursework materials":
+            "Ders malzemelerinizden özel uygulama sınavları oluşturun",
+        "Upload your assignment task and receive a structured guide for it":
+            "Görevinizi yükleyin ve onun için yapılandırılmış bir rehber alın",
+        "Get concise, accurate summaries of online video content":
+            "Çevrimiçi video içeriğinin özlü ve doğru özetlerini alın",
+        "More queries": "Daha fazla sorgu",
+        "More Queries": "Daha fazla sorgu",
+        "Provide tips in Canvas Quiz": "Canvas Quizinde ipuçları sağlayın",
+        quiz_question: "Tuval İpuçları"
+    },
+
+    Login: {
+        login_person: "Kişiseliniz",
+        login_copilot: "Çalışma Yardımcısı",
+        login_google: "Google ile devam et",
+        login_email: "E-posta ile devam edin",
+        login_account: "Hesabınız yok mu?",
+        login_create: "Hesap oluştur",
+        login_policy: "Kaydolarak, kabul edersiniz.",
+        login_policy_2: "Şartlar ve koşullar ",
+        login_policy_3: "ile ",
+        login_policy_4: "Gizlilik Politikası.",
+        login_back: "Geri",
+        login_address: "E-posta adresi",
+        login_password: "Şifre",
+        login_signin: "Giriş",
+        login_forget: "Parolanızı mı unuttunuz?",
+        login_code: "Kodunuzu girin",
+        login_getCode: "Kod al",
+        login_reset: "Şifreyi sıfırla",
+        login_remember: "Şifreyi hatırla? ",
+        login_remember_2: "Giriş yap",
+        login_name: "İsim",
+        login_signUp: "Kaydol",
+        login_verify: "E-posta kimliğini doğrulayın",
+        login_digit: `"Lütfen {email}'e gönderdiğimiz 6 haneli doğrulama kodunu girin. 
+    Bu kod 5 dakika içinde geçerliliğini yitirir."`,
+        login_check: "Doğrulamak",
+        login_signUpGoogle: "Google hesabınız var mı? ",
+        login_signUpGoogle_2: "Google ile kaydolun.",
+        login_valid_email: "Lütfen geçerli bir e-posta adresi girin",
+        login_valid_password: "Şifre en az 6 karakter, harfler ve rakamlar içermelidir.",
+        login_valid_name: "İsim en az 2 karakter içermelidir.",
+        login_enter_email: "Lütfen e-postanızı girin",
+        login_enter_password: "Lütfen şifrenizi girin",
+        login_enter_verify_code: "Lütfen doğrulama kodunu girin",
+        login_enter_name: "Lütfen adınızı girin"
+    }
+};

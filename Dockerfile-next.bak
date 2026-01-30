@@ -1,0 +1,83 @@
+FROM --platform=linux/amd64 node:18-alpine AS base
+
+# This Dockerfile is copy-pasted into our main docs at /docs/handbook/deploying-with-docker.
+# Make sure you update both files!
+
+FROM base AS builder
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+#RUN apk update
+#RUN apk add --no-cache libc6-compat
+
+ARG REPO
+ENV REPO ${REPO}
+
+# Set working directory
+WORKDIR /app
+RUN yarn global add turbo
+COPY . .
+RUN turbo prune $REPO --docker
+
+
+
+
+# Add lockfile and package.json's of isolated subworkspace
+FROM base AS installer
+#RUN apk update
+#RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+
+ARG APP_ENV
+ARG REPO
+
+ENV APP_ENV ${APP_ENV}
+ENV REPO ${REPO}
+
+
+# First install the dependencies (as they change less often)
+COPY .gitignore .gitignore
+COPY --from=builder /app/out/json/ .
+COPY --from=builder /app/out/yarn.lock ./yarn.lock
+
+RUN yarn install && yarn add sharp --ignore-engines -W
+
+# Build the project
+COPY --from=builder /app/out/full/ .
+COPY turbo.json turbo.json
+
+# Uncomment and use build args to enable remote caching
+# ARG TURBO_TEAM
+# ENV TURBO_TEAM=$TURBO_TEAM
+
+# ARG TURBO_TOKEN
+# ENV TURBO_TOKEN=$TURBO_TOKEN
+
+
+RUN echo yarn turbo build:$APP_ENV --filter=$REPO
+RUN yarn turbo build:$APP_ENV --filter=$REPO
+
+FROM base AS runner
+WORKDIR /app
+
+
+ARG APP_ENV
+ARG REPO
+
+ENV APP_ENV ${APP_ENV}
+ENV REPO ${REPO}
+
+# Don't run production as root
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+USER nextjs
+
+COPY --from=installer /app/apps/${REPO}/next.config.mjs .
+COPY --from=installer /app/apps/${REPO}/package.json .
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=installer --chown=nextjs:nodejs /app/apps/$REPO/.next/standalone ./
+COPY --from=installer --chown=nextjs:nodejs /app/apps/$REPO/.next/static ./apps/$REPO/.next/static
+COPY --from=installer --chown=nextjs:nodejs /app/apps/$REPO/public ./apps/$REPO/public
+
+CMD HOSTNAME="0.0.0.0" PORT=8080 node /app/apps/$REPO/server.js

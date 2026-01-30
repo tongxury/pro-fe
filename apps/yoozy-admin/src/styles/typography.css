@@ -1,0 +1,12 @@
+@layer components {
+  /* 字體樣式指南 */
+
+  /* 1rem SemiBold */
+  .font-header-1 {
+    @apply text-[1rem] font-[380] leading-[160%] text-primary;
+  }
+
+  .font-hover-white {
+    @apply hover:text-white cursor-pointer text-white/60 data-[state=active]:text-white/80;
+  }
+}

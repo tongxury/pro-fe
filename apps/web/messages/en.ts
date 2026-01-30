@@ -1,0 +1,416 @@
+export default {
+    Feedback: {
+        feedback: "Feedback",
+        desc: "Due to time zone differences and working hours, we will process your feedback within 48 business hours. Please check your email for our response.",
+        types: "Types of Issues",
+        bug: "Bug Report",
+        feature: "Feature Request",
+        "issue detail": "Issue Detail",
+        submit: "Submit"
+    },
+    Header: {
+        Home: "Home",
+        Pricing: "Pricing",
+        Login: "Login"
+    },
+    Difference: {
+        "Difference between ChatGPT and": "Difference between ChatGPT and {appName}",
+        chat: "Chat",
+        features: "Features",
+        "All in one Al chatbot": "All in one Al chatbot",
+        "Web Access": "Web Access",
+        "Quick Action & Quick Compose": "Quick Action & Quick Compose",
+        reading: "Reading",
+        "Webpage & PDF & Youtube summary": "Webpage & PDF & Youtube summary",
+        "Image Reading": "Image Reading",
+        search: "Search",
+        "Search Agent": "Search Agent",
+        "Search Enhance": "Search Enhance",
+        translator: "Translator",
+        "Web Translation": "Web Translation",
+        "Document Translation": "Document Translation",
+        writing: "Writing",
+        "Writing Agent & Email Reply": "Writing Agent & Email Reply"
+    },
+    Home: {
+        "Difference between ChatGPT and": "Difference between ChatGPT and {appName}",
+        title: "Super-Powered AI Study Aids, \n All-In-One, Real-Time & Free. ",
+        subtitle:
+            "Just like the X-Men, X-Tips is a team of superpowers that quickly appears when you need help with your studies, providing you with various tips to enhance your skills in searching, reading，writing, translating etc.",
+        "all-in-one ai assistant": "All-in-One AI Study Helper",
+        "useful everywhere": "Available Everywhere",
+        "AI Sidebar": "AI Sidebar",
+        "add to chrome": "Add to Chrome",
+        "available on all platforms": "All Platforms are Available",
+        "one-click to access all ai features from any web page":
+            "Access all features with one click from any web page.",
+        "chat with your favorite assistant from browser, desktop and mobile phone":
+            "Chat with your favorite study aids through your personal computer's browser, regardless of whether you're using a Mac, Windows, or Linux operating system",
+        "smart toolbar": "Smart Toolbar",
+        "seamlessly explain, translate or summarize any text you select":
+            "Smoothly explaining, translating, or summarizing any text you choose, enhance your learning efficiency.",
+        "writing assistant": "Writing Helper",
+        "draft, rewrite or improve text content on any web page":
+            "Draft, rewrite, or improve the text on any webpage or learning materials you choose.",
+        "works for professionals": "Useful For Multiple Majors",
+        "they love": "They Love {appName}",
+        "frequently asked questions": "Frequently Asked Questions",
+        "unlock your true potential": "Unlock your true potential, \nget {appName} now.",
+        comments: "Comments"
+    },
+    Pricing: {
+        writing: "Writing",
+        "Difference between ChatGPT and": "Difference between ChatGPT and {appName}",
+        "Frequently asked questions": "Frequently asked questions",
+        "Learn more about why XTips is seen as a great ChatGPT Plus Alternative":
+            "Learn more about why XTips is seen as a great ChatGPT Plus Alternative .",
+        GPT4: "GPT-4",
+        supports: "Supports",
+        "energize your academic level with": "Boost up your productivity with {name}",
+        "subscribe now to secure Early Bird Pricing before it increases soon!":
+            "We offer one of the most cost-effective solutions in the market!",
+        annually: "Annually",
+        quarterly: "Quarterly",
+        monthly: "Monthly",
+        save: "save {save}",
+        "Sign in to subscribe": "Sign in to subscribe",
+        "benefits per month": "Benefits per month",
+        "advanced function": "Advanced Features",
+        "advanced function trial": "Advanced Features Trial",
+        queries: "queries",
+        webAccess: "Web Access",
+        literatureSearch: "Literature Search",
+        chatDocument: "Chat Document",
+        testPaper: "Test Paper",
+        writingGuide: "Writing Guide",
+        chatVideo: "Video Summarize",
+        chatImage: "Chat Image",
+        emailCopilot: "Email Copilot",
+        "powerful models": "Powerful Models",
+        subscribe: "Subscribe",
+        loading: "Loading",
+        "this plan will renew on": "This plan will renew on",
+        "manage billing": "Manage Billing",
+        and: "and",
+        "start 3 day free trial": "Start 3 day free trial",
+        "exclusive member features": "Exclusive member features",
+        "most popular model with fast response speed": "Most popular model with fast response speed",
+        "most powerful model with incomparable capabilities": "Most powerful model with incomparable capabilities",
+        "enable AI to analyze your course documents to provide answers":
+            "Enable AI to analyze your course documents to provide answers",
+        "enable AI to analyse your learning material to provide test paper":
+            "Enable AI to analyse your learning material to provide test paper",
+        "enable AI to analyse your writing task to provide writing guide":
+            "Enable AI to analyse your writing task to provide writing guide",
+        "enable AI to provide accurate summary of online video content":
+            "Enable AI to provide accurate summary of online video content",
+        "enable AI to analyze intent of email and provide quick reply":
+            "Enable AI to analyze intent of email and provide quick reply",
+        "the most widely used GPT-4 and GPT35 are both supported":
+            "The most widely used GPT-4 and GPT3.5 are both supported",
+        unlimited: "Unlimited",
+        "day free trial": "{days}-day free trial",
+        "price after trial": `{price} USD/month after the trial period`,
+        "signed up before": "Only for users signed up before {date}",
+        "Start free trial": "Start {days}-day free trial",
+        "offer end in": "Offer end in {days} {date} {hours}:{minutes}:{seconds}",
+        "$0 payment today": "$0 payment today",
+        "Other Benefits": "Other Benefits",
+        notification:
+            "XTips's Unlimited Plan is still in the testing phase, and may change in the future based on the rules of other companies like OpenAI and Anthropic. If there are any changes to the Unlimited Plan, we will notify you through in-app messages and update the pricing page and website immediately. XTips accounts are for individual use only, and any non-human/robot usage or multi-user issues may result in account suspension. If you need email support, please send an email to ",
+        "subscribed successfully": "Subscribed Successfully",
+        "try it now": "Try it now！",
+        "current plan": "Current plan",
+        "use GPT4 queries": "use GPT4 queries",
+        year: "year",
+        month: "month",
+        day: "day",
+        "Save 25% (pay 9 mos, get 12 mos)": "Save 25% (pay 9 mos, get 12 mos)",
+        "Advanced Model": "Advanced Model",
+        More_queries_desc: "More queries:GPT-4: {gpt4Times}/month GPT-3.5: {gpt35Times}/month",
+        "Empower AI to recognize images and tables and answer your inquiries":
+            "Empower AI to recognize images and tables and answer your inquiries",
+        "Submit your document and get detailed analysis from key points":
+            "Submit your document and get detailed analysis from key points",
+        "Generate customized practice exams from your coursework materials":
+            "Generate customized practice exams from your coursework materials",
+        "Upload your assignment task and receive a structured guide for it":
+            " Upload your assignment task and receive a structured guide for it",
+        "Get concise, accurate summaries of online video content":
+            "Get concise, accurate summaries of online video content",
+        "Provide tips in Canvas Quiz": "Provide tips in Canvas Quiz",
+        quiz_question: "Canvas Tips",
+        "More queries": "Queries",
+        "More Queries": "Queries"
+    },
+    Login: {
+        login_person: "Your Personal",
+        login_copilot: "Al Study Copilot",
+        login_google: "Continue with Google",
+        login_email: "Continue with Email",
+        login_account: "Do not have an account?",
+        login_create: "Create account",
+        login_policy: "By signing up, you agree to the",
+        login_policy_2: "terms and Conditions",
+        login_policy_3: "and",
+        login_policy_4: "privacy Policy.",
+        login_back: "Back",
+        login_address: "Email Address",
+        login_password: "Password",
+        login_signin: "Sign in",
+        login_forget: "Forgot Password?",
+        login_code: "Enter your code",
+        login_getCode: "Get code",
+        login_reset: "Reset password",
+        login_remember: "Remember password? ",
+        login_remember_2: "Sign in",
+        login_name: "Name",
+        login_signUp: "Sign up",
+        login_verify: "Verify email ID",
+        login_digit: "Please enter the 6-digit verification code we sent to {email}.This code expires within 5 minutes",
+        login_check: "Verify",
+        login_signUpGoogle: "Have a Google account? ",
+        login_signUpGoogle_2: "Sign up with Google",
+        login_valid_email: "Please enter a valid email address",
+        login_valid_password: "Password must contain at least 6 characters, including letters and numbers",
+        login_valid_name: "Name must contain at least 2 characters",
+        login_enter_email: "Please enter your email",
+        login_enter_password: "Please enter your password",
+        login_enter_verify_code: "Please enter verify code",
+        login_enter_name: "Please enter your name",
+        welcome_to: "Welcome to {appName}!",
+        use_now: "use it right now"
+    },
+    QA: {
+        "What is XTips?": "What is XTips?",
+        "answer:What is XTips?":
+            "XTips is a Chrome extension powered by AI models (GPT-4, GPT-4o, Claude 3, Gemini, etc.), dedicated to being your personal AI Study Aids, assisting you in efficient searching, article translation, summarization, and writing.",
+        "How does XTips work?": "How can I use XTips?",
+        "answer:How does XTips work?":
+            "Just Click the XTips icon to start chatting with it immediately. Or select a piece of text on the web page and let XTips explain, translate, and rewrite it for you.",
+        "answer:How can I use XTips?":
+            "Once installed as a Chrome extension on the browser, you can open XTips on any website using the shortcut: ctrl/ cmd+I. On specific websites such as Youtube and Canvas, you will find XTips buttons for easy access.",
+        "What can I do with XTips?": "What can I do with XTips?",
+        "answer:What can I do with XTips?":
+            "XTips offers a range of valuable features, including answering academic questions, summarizing research papers, explaining complex concepts, creating test papers, and even assisting in writing essays or research papers.",
+        "Is XTips free to use?": "Is XTips free?",
+        "answer:Is XTips free to use?":
+            "You can use XTips for free. Free users only have a daily usage limit. For more powerful features, you may need to pay, but XTips worth it.",
+        "Do I need a XTips account to use the service?": "Do I need a XTips account to use the service?",
+        "answer:Do I need a XTips account to use the service?":
+            "No, you do not need a XTips account to get started. You can sign in with gmail or any emails you use to unlocks additional personalized learning features and allows you to track your progress effectively.",
+        "Which subjects does XTips cover?": "Which subjects does XTips cover?",
+        "answer:Which subjects does XTips cover?":
+            "XTips caters to a wide range of subjects, including mathematics, science, finance, history, computer science, languages, and more.",
+        "Does XTips support multiple languages?": "Does XTips support multiple languages?",
+        "answer:Does XTips support multiple languages?":
+            "Yes, XTips offers more than 56 multilingual supports, ensuring learners from diverse linguistic backgrounds can benefit from its services.",
+        "Is my privacy and data secure with XTips?": "Is my privacy and data secure with XTips?",
+        "answer:Is my privacy and data secure with XTips?":
+            "Absolutely! Your privacy and data security are of utmost importance to us. XTips ensures all interactions and information are handled with strict confidentiality.",
+        "Is XTips available globally?": "Is XTips available globally?",
+        "answer:Is XTips available globally?":
+            "Yes, XTips is accessible to learners from all around the world, providing valuable assistance regardless of your location.",
+        "Can XTips be used by educators and teachers?": "Can XTips be used by educators and teachers?",
+        "answer:Can XTips be used by educators and teachers?":
+            "Certainly! XTips is a valuable tool for educators and teachers to enhance their teaching strategies and provide personalized support to their students."
+    },
+    Swiper: {
+        Chat: "Chat",
+        Writing: "Writing",
+        Translate: "Translate",
+        Search: "Search",
+        Read: "Read",
+        "Chat with all of the best models in one place":
+            "Your study companion, allowing you to communicate with the best models quickly and easily every day.",
+        "Write or improve any content 10X faster, from a paragraph to a full article":
+            "Significantly enhance your writing skills for assignments and essays, leading to a substantial increase in writing efficiency.",
+        "Your powerful answer engine with realtime web access":
+            "A powerful search engine that provides real-time, accurate answers to any questions you encounter during your studying.",
+        "Translate any web page for an Immersive bilingual reading experience":
+            "Multi-language translation enables you to develop a passion for reading foreign language documents and gain an international perspective."
+    },
+    Overview: {
+        analyst: "Data Analytics",
+        customerService: "Customer Service",
+        developer: "Computer Science",
+        entrepreneur: "Business Administration",
+        marketing: "Marketing",
+        research: "Researcher",
+        Entrepreneur: "Entrepreneur",
+        EntrepreneurTitle1: "AI Business Intelligence",
+        EntrepreneurContent1:
+            "AI automates extensive research tasks, summarizes competitor activities intelligently, and provides thorough analysis of market trends.",
+        EntrepreneurTitle2: "AI Strategy Helper",
+        EntrepreneurContent2:
+            "AI analyzes problems and challenges in depth, automatically searches for key information, and generates insightful strategic inspiration.",
+        EntrepreneurTitle3: "AI Email Helper",
+        EntrepreneurContent3:
+            "AI summarizes important emails and automatically composes appropriate reply emails based on contextual information.",
+        EntrepreneurTitle4: "AI Reading Helper",
+        EntrepreneurContent4:
+            "AI accurately captures key details of documents and easily solves the problem of reading contract documents and long reports.",
+        AnalystTitle1: "AI Research Helper",
+        AnalystContent1:
+            "AI automatically searches professional reports and data, conducts in-depth analysis of complex business issues, and quickly completes research preparations.",
+        AnalystTitle2: "AI Data Session",
+        AnalystContent2:
+            "AI intelligently generates SQL statements, data analysis programs, and finally forms visual data files.",
+        AnalystTitle3: "AI Report Writing",
+        AnalystContent3:
+            "AI vividly simulates human thinking, efficiently generates insightful analysis reports, and automatically quotes authoritative information.",
+        AnalystTitle4: "AI Industry Forecast",
+        AnalystContent4:
+            "AI automatically analyzes data to predict and mine industry development and industry knowledge rules.",
+        ResearcherTitle1: "AI Paper Writing",
+        ResearcherContent1:
+            "AI simulates human thinking, automatically and efficiently generates coherent and in-depth academic papers, and automatically cites authoritative documents.",
+        ResearcherTitle2: "AI Academic Search",
+        ResearcherContent2:
+            "AI performs in-depth academic search tasks, accurately cites high-quality literature reports, and automatically summarizes and generates literature reviews.",
+        ResearcherTitle3: "AI Citations",
+        ResearcherContent3:
+            "AI automatically generates bibliographies and accurately converts links, books, and reports into cited literature lists.",
+        ResearcherTitle4: "AI Research Helper",
+        ResearcherContent4:
+            "AI accurately analyzes writing topics and requirements, generates logical and self-consistent essay outlines, provides writing inspiration, and improves writing skills.",
+        DeveloperTitle1: "AI Programming Helper",
+        DeveloperContent1:
+            "AI automatically conducts precise and in-depth searches on websites such as GitHub/StackOverflow to find code examples and technical discussions.",
+        DeveloperTitle2: "AI Code Tips",
+        DeveloperContent2:
+            "AI automatically reads the project context and coding style in depth, and intelligently provides code writing and code optimization suggestions in real time.",
+        DeveloperTitle3: "AI Code Generation",
+        DeveloperContent3:
+            "AI simulates a senior program engineer and automatically and intelligently generates efficient code and unit test examples.",
+        DeveloperTitle4: "Bot Platform",
+        DeveloperContent4:
+            "AI efficiently builds personalized AI bots supported by GPT-4/GPT-4o from scratch and automatically integrates them into automated workflows.",
+        MarketingTitle1: "AI Market Intelligence",
+        MarketingContent1:
+            "AI automates extensive research tasks, summarizes competitor activities intelligently, and provides thorough analysis of market trends.",
+        MarketingTitle2: "AI User Research",
+        MarketingContent2:
+            "AI deeply mines user data, user needs and user feedback, intelligently segments customers, and establishes comprehensive user portraits.",
+        MarketingTitle3: "AI Solution Helper",
+        MarketingContent3:
+            "AI automatically searches for advertising ideas, intelligently generates marketing plans, and automatically creates advertising images and copywriting examples.",
+        MarketingTitle4: "AI article Helper",
+        MarketingContent4:
+            "AI simulates article writing experts to intelligently create articles, advertising copy, and customer stories in batches, thereby saving costs.",
+        "Customer Service": "Customer Service",
+        CustomerServiceTitle1: "AI Q&A Helper",
+        CustomerServiceContent1:
+            "AI accurately searches Q&A and quickly answers product details and FAQs raised by customers.",
+        CustomerServiceTitle2: "AI Email Helper",
+        CustomerServiceContent2:
+            "AI intelligently generates reply emails to customer emails, easily handling diverse issues such as customer product usage operations.",
+        CustomerServiceTitle3: "AI follow-up Helper",
+        CustomerServiceContent3:
+            "AI combines customer communication and feedback history and context to guide next steps and customize follow-up materials.",
+        CustomerServiceTitle4: "AI Customer Expert",
+        CustomerServiceContent4:
+            "AI intelligently analyzes customer conversation and behavioral data to accurately identify customer needs and preferences."
+    },
+    Default: {
+        chat: "Chat",
+        compose: "Compose",
+        homework: "Homework Help",
+        research_paper: "Research Paper",
+        writing_assistant: "Writing Assistant",
+        library: "Library",
+        selectedText: "Selected Text",
+        "let ai generate anything": "Let AI Generate Anything",
+        "search libraries": "Search Libraries",
+        chatHistory: "Chat History",
+        question: "Question",
+        scholar: "Scholar",
+        favorite: "Favorite",
+        recent: "Recent",
+        all: "All",
+        homeworkHelp: "Homework",
+        homeworkQuestion: "Homework Question",
+        "your ai homework helper": "Your AI Homework Helper",
+        solution: "Solution",
+        similarQuestions: "Similar Questions",
+        "get new answer": "Get New Answer",
+        scholarSearch: "Scholar Search",
+        chatMode: "Chat",
+        chatModeDesc: "Chat Mode",
+        autoMode: "Auto",
+        autoModeDesc: "Auto Mode",
+        intlMode: "Internet",
+        intlModeDesc: "Internet Mode",
+        scholarMode: "Scholar",
+        scholarModeDesc: "Scholar Mode",
+        chat_history: "Chat History",
+        new_chat: "New Chat",
+        normal_chat: "Chat",
+        document_qa: "Document Q&A",
+        "answer again": "Answer Again",
+        architecture: "Architecture",
+        engineering: "Engineering",
+        economics: "Economics",
+        law: "Law",
+        science: "Science",
+        education: "Education",
+        writingAssistant: "Writing Assistant",
+        "new document": "New Document",
+        "open in new tab": "Open in New Tab",
+        delete: "Delete",
+        untitled: "Untitled",
+        search: "Search",
+        sources: "Sources",
+        collections: "Collections",
+        uploadSources: "Upload Sources",
+        "search sources": "Search Sources",
+        cite: "Cite",
+        view: "View",
+        "ai chat": "AI Chat",
+        askFollowUp: "Ask Follow-Up Questions",
+        nextQuestion: "Next Question",
+        "Ask a new research question, get a answer with citations":
+            "Ask a New Research Question, Get an Answer with Citations",
+        collapseTranscript: "Collapse Transcript",
+        showTranscript: "Show Transcript",
+        "Add tag to this Q&A": "Add Tag to this Q&A",
+        copyQA: "Copy Q&A",
+        copyLink: "Copy Link",
+        copyImage: "Copy Image",
+        noData: "No Data",
+        uploadingProgress: "Uploading {progress}",
+        "generate draft": "Generate Draft",
+        Result: "Result",
+        format: "Format",
+        tone: "Tone",
+        length: "Length",
+        lang: "Language",
+        essay: "Essay",
+        "blog post": "Blog Post",
+        paragraph: "Paragraph",
+        outline: "Outline",
+        email: "Email",
+        comment: "Comment",
+        idea: "Idea",
+        message: "Message",
+        twitter: "Twitter",
+        formal: "Formal",
+        casual: "Casual",
+        professional: "Professional",
+        enthusiastic: "Enthusiastic",
+        informational: "Informational",
+        funny: "Funny",
+        short: "Short",
+        medium: "Medium",
+        long: "Long",
+        "Get answer": "Get Answer",
+        Insert: "Insert",
+        "Start Writing": "Start Writing",
+        Regen: "Regen",
+        "Sub Point": "Sub Point",
+        Outline: "Outline",
+        Accept: "Accept",
+        saved: "Saved",
+        copied: "Copied"
+    }
+};

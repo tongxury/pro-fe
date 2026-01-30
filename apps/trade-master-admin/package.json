@@ -1,0 +1,45 @@
+{
+  "name": "trade-master-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env UMI_ENV=develop max dev",
+    "dev:staging": "cross-env UMI_ENV=staging max dev",
+    "dev:production": "cross-env UMI_ENV=production max dev",
+    "build": "cross-env UMI_ENV=develop max build",
+    "build:staging": "cross-env UMI_ENV=staging max build",
+    "build:production": "cross-env UMI_ENV=production max build",
+    "format": "prettier --cache --write .",
+    "postinstall": "max setup",
+    "setup": "max setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ahooksjs/use-url-state": "^3.5.1",
+    "@ant-design/pro-layout": "^7.17.10",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/joy": "^5.0.0-beta.11",
+    "@mui/material": "^5.14.14",
+    "@mui/system": "^5.14.14",
+    "@umijs/max": "^4.4.1",
+    "ahooks": "^3.7.8",
+    "antd": "^5.10.2",
+    "axios": "^1.5.1",
+    "cross-env": "^7.0.3",
+    "js-cookie": "^3.0.5",
+    "json-edit-react": "^1.19.1",
+    "moment": "^2.29.4",
+    "quill-image-resize-module-react": "^3.0.0",
+    "react-quill": "^2.0.0",
+    "react-text-gradients": "^1.0.2",
+    "umi-request": "^1.4.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.5",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.0.3"
+  }
+}

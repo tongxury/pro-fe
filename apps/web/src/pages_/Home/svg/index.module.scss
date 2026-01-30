@@ -1,0 +1,25 @@
+.svg{
+  .png1,
+  .png2,
+  .png3, .poanel, .writingAssistant {
+    transition: all 1s;
+  }
+  &:hover .png1 {
+    transform: matrix(1, 0, 0, 1, 167, 190);
+  }
+  
+  &:hover .png2 {
+    transform: matrix(1, 0, 0, 1, 752, 156);
+  }
+  
+  &:hover .png3 {
+    opacity: 1;
+    transform: matrix(0.9999999403953552, 0, 0, 0.9999999403953552, 930.25, 43.0000762939453);
+  }
+  &:hover .poanel {
+    transform: matrix(1.0994787216186523, 0, 0, 1.0994787216186523, 106.42831420898438, 275.4471130371094);
+  }
+  &:hover .writingAssistant {
+    transform: matrix(0.9996628761291504, 0, 0, 0.9996628761291504, 4.1968994140625, 197.13894653320312)
+  }
+}

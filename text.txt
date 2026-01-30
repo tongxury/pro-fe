@@ -1,0 +1,9 @@
+1. 通过商品链接获取商品详细信息。例如：
+    输入 https://v.douyin.com/KNTZ1rd9h6Q/
+    输出 商品详情页的标题图片品牌等信息
+
+2. 抖音带货视频接口
+
+
+3. 生成图片有敏感信息报错
+ERROR GenerateImages err=err Error code: 400 - {"code":"InputImageSensitiveContentDetected","message":"The request failed because the input image may contain sensitive information. Request id: 021762855009780f6573e1bacea60d25648097be60860e94fcd32","type":"","request_id":"202511110956490000FE60BE9FA353CA4F"}=KEYVALS UNPAIRED

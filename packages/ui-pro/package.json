@@ -1,0 +1,32 @@
+{
+  "name": "@pro/ui-pro",
+  "description": "粒度稍微大一些的功能组件",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@turbo/gen": "^1.12.4",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.3.1",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@pro/ui": "*",
+    "antd": "^5.16.5",
+    "@types/react-dom": "^18.3.0",
+    "ahooks": "^3.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "next-intl": "^3.15.3"
+  }
+}
