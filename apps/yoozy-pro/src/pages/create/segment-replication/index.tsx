@@ -94,7 +94,7 @@ const SegmentReplication = () => {
             segmentId: urlState?.inspirationId!,
             workflowName: workflowName,
             chanceIndex: urlState?.chanceIndex !== undefined ? Number(urlState?.chanceIndex) : 0,
-            auto: true,
+            // auto: true,
         });
     };
 
