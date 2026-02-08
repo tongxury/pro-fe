@@ -41,10 +41,10 @@ const Sider = () => {
                     path: '/create',
                     name: 'AI创作',
                     routes: [
-                        {
-                            path: '/create/template-replication',
-                            name: '智能成片',
-                        },
+                        // {
+                        //     path: '/create/template-replication',
+                        //     name: '智能成片',
+                        // },
                         {
                             path: '/create/segment-replication',
                             name: '片段复刻',
