@@ -3,7 +3,7 @@ import { request } from "@/api/index.ts";
 
 export const listResourceSegments = async (params: any) => {
     return request({
-        url: `/api/am/v2/resource-segments`,
+        url: `/api/proj/v1/resource-segments`,
         params
     });
 };
@@ -12,8 +12,23 @@ export const listResourceSegments = async (params: any) => {
 
 export const getResourceSegment = async (params: { id: string }) => {
     return request({
-        url: `/api/am/v2/resource-segments/${params.id}`,
+        url: `/api/proj/v1/resource-segments/${params.id}`,
         params
+    });
+};
+
+export const updateResourceSegment = async (id: string, action: 'collect' | 'cancel') => {
+    return request({
+        url: `/api/proj/v1/resource-segments/${id}`,
+        method: 'PATCH',
+        data: { action }
+    });
+};
+
+export const listCollectedResourceSegments = async (params: any) => {
+    return listResourceSegments({
+        ...params,
+        collected: true
     });
 };
 

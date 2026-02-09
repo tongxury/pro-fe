@@ -6,11 +6,13 @@ import {
     ClockCircleOutlined,
     ArrowRightOutlined,
     FileTextOutlined,
-    CopyOutlined
+    CopyOutlined,
+    HeartOutlined,
+    HeartFilled,
 } from "@ant-design/icons";
 import { useRouter } from "@/hooks/useRouter.tsx";
 import VideoSegment from "@/components/VideoSegment";
-import { getResourceSegment } from "@/api/resource.ts";
+import { getResourceSegment, updateResourceSegment } from "@/api/resource.ts";
 import Image from "@/components/Image";
 import { formatDuration } from "@/utils";
 import { useRequestData } from "@/hooks/useRequestData";
@@ -20,11 +22,16 @@ const Detail = ({ id, showEntry, children }: { id: string, showEntry?: boolean, 
 
     const [open, setOpen] = useState(false);
     const [scriptOpen, setScriptOpen] = useState(false);
+    const [collected, setCollected] = useState(false);
 
     const router = useRouter()
 
-    const { data, loading } = useRequestData(() => {
-        return getResourceSegment({ id: id })
+    const { data, loading } = useRequestData(async () => {
+        const res = await getResourceSegment({ id: id });
+        if (res?.data) {
+            setCollected(!!res.data.collected);
+        }
+        return res;
     }, { ready: open })
 
     const onOpen = () => {
@@ -96,17 +103,32 @@ const Detail = ({ id, showEntry, children }: { id: string, showEntry?: boolean, 
                                         {data?.description}
                                     </Typography.Title>
 
-                                    {data?.script && (
-                                        <Button
-                                            type="default"
-                                            size="small"
-                                            icon={<FileTextOutlined />}
-                                            className="!rounded-full flex-shrink-0 !text-gray-600 !border-gray-200 hover:!text-[#7150ff] hover:!border-[#7150ff] hover:!bg-[#7150ff]/5 flex items-center gap-1 px-3"
-                                            onClick={() => setScriptOpen(true)}
+                                    <div className="flex items-center gap-3">
+                                        {data?.script && (
+                                            <Button
+                                                type="default"
+                                                size="small"
+                                                icon={<FileTextOutlined />}
+                                                className="!rounded-full flex-shrink-0 !text-gray-600 !border-gray-200 hover:!text-[#7150ff] hover:!border-[#7150ff] hover:!bg-[#7150ff]/5 flex items-center gap-1 px-3"
+                                                onClick={() => setScriptOpen(true)}
+                                            >
+                                                查看拍摄手法
+                                            </Button>
+                                        )}
+                                        <div
+                                            className="p-1.5 rounded-full hover:bg-gray-100 transition-colors cursor-pointer flex items-center justify-center"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                const action = collected ? 'cancel' : 'collect';
+                                                updateResourceSegment(id, action).then(() => {
+                                                    setCollected(!collected);
+                                                    message.success(collected ? '已取消收藏' : '已收藏');
+                                                });
+                                            }}
                                         >
-                                            查看拍摄手法
-                                        </Button>
-                                    )}
+                                            {collected ? <HeartFilled className="text-red-500 text-xl" /> : <HeartOutlined className="text-gray-400 text-xl hover:text-red-400" />}
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div className="flex flex-wrap gap-2 items-center">

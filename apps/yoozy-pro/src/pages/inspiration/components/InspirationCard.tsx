@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import DetailV2 from "@/pages/inspiration/DetailV2";
 import classNames from "classnames";
+import { HeartFilled, HeartOutlined } from "@ant-design/icons";
+import { updateResourceSegment } from "@/api/resource";
 
 interface InspirationCardProps {
     data: any;
@@ -9,6 +11,7 @@ interface InspirationCardProps {
 }
 
 const InspirationCard: React.FC<InspirationCardProps> = ({ data, className, showEntry }) => {
+    const [collected, setCollected] = useState(data.collected);
     if (!data) return null;
 
     const coverUrl = data.segments?.[0]?.startFrame || data.highlightFrames?.[0]?.url || data.root?.coverUrl;
@@ -41,6 +44,20 @@ const InspirationCard: React.FC<InspirationCardProps> = ({ data, className, show
                                 {t}
                             </span>
                         ))}
+                    </div>
+
+                    {/* Collection Button */}
+                    <div
+                        className="absolute top-3 right-3 p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/40 transition-colors cursor-pointer"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            const action = collected ? 'cancel' : 'collect';
+                            updateResourceSegment(data._id, action).then(() => {
+                                setCollected(!collected);
+                            });
+                        }}
+                    >
+                        {collected ? <HeartFilled className="text-red-500 text-lg" /> : <HeartOutlined className="text-white text-lg" />}
                     </div>
                 </div>
             </div>

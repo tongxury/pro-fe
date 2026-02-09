@@ -10,7 +10,7 @@ import {
 } from "antd";
 import { useRequest } from "ahooks";
 import { FilterOutlined, SearchOutlined } from "@ant-design/icons";
-import { listResourceSegments } from "@/api/resource.ts";
+import { listCollectedResourceSegments, listResourceSegments } from "@/api/resource.ts";
 import Detail from "@/pages/inspiration/Detail.tsx";
 import DetailV2 from "@/pages/inspiration/DetailV2.tsx";
 import useUrlState from "@ahooksjs/use-url-state";
@@ -20,17 +20,20 @@ import InspirationCard from "@/pages/inspiration/components/InspirationCard";
 export default function InspirationList() {
     const [params, setParams] = useUrlState<any>({ page: 1, size: 15 });
 
-    const { data: d, loading, run } = useRequest(() => listResourceSegments({
-        ...params,
-        returnFields: [
-            "highlightFrames",
-            "status",
-            "typedTags.text",
-            "typedTags.picture",
-            "typedTags.scene",
-            "segments"
-        ].join(","),
-    }), {
+    const { data: d, loading, run } = useRequest(async () => {
+        return listResourceSegments({
+            ...params,
+            returnFields: [
+                "highlightFrames",
+                "status",
+                "typedTags.text",
+                "typedTags.picture",
+                "typedTags.scene",
+                "segments",
+                "collected"
+            ].join(","),
+        })
+    }, {
         // manual: true,
         refreshDeps: [params],
     });
@@ -69,10 +72,23 @@ export default function InspirationList() {
                     {/* Filters */}
                     <div className="flex flex-col md:flex-row justify-between gap-4">
                         <Space size="large">
-                            <div className="flex items-center gap-2">
-                                <FilterOutlined className="text-gray-400" />
-                                <span className="font-medium text-gray-700">筛选</span>
+                            <div className="bg-gray-100 p-1 rounded-lg inline-flex">
+                                <button
+                                    className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${!params.collected ? 'bg-white text-gray-800 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+                                    onClick={() => handleFilterChange('collected', undefined)}
+                                >
+                                    全部灵感
+                                </button>
+                                <button
+                                    className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${params.collected ? 'bg-white text-gray-800 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+                                    onClick={() => handleFilterChange('collected', true)}
+                                >
+                                    我的收藏
+                                </button>
                             </div>
+
+                            <div className="h-6 w-[1px] bg-gray-200"></div>
+
                             <Space.Compact>
                                 <Select
                                     defaultValue="commodity"
