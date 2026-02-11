@@ -1,22 +1,22 @@
-import {Button, Form, Input, message, Modal} from "antd";
-import {useTranslation} from "react-i18next";
-import {cloneElement, ReactElement, useState} from "react";
-import {XFlex} from "@pro/ui";
-import {replaceFollowingWallet, updateFollowingWalletRemark} from "@/api/api.ts";
+import { Button, Form, Input, message, Modal } from "antd";
+import { useTranslation } from "react-i18next";
+import { cloneElement, ReactElement, useState } from "react";
+import { XFlex } from "@pro/ui";
+import { replaceFollowingWallet, updateFollowingWalletRemark } from "@/api/api.ts";
 
 
-function Edit({initialValues, onEdited, children}: {
+function Edit({ initialValues, onEdited, children }: {
     initialValues: { wallet: string, remark?: string },
     onEdited?: (data) => void
     children: ReactElement
 }) {
 
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     const [open, setOpen] = useState(false)
 
     const onFinish = (values: any) => {
-        updateFollowingWalletRemark({id: initialValues.wallet, ...values}).then(result => {
+        updateFollowingWalletRemark({ id: initialValues.wallet, ...values }).then(result => {
             if (result.code) {
                 message.error({
                     content: t(result.message),
@@ -38,11 +38,10 @@ function Edit({initialValues, onEdited, children}: {
             closable={false}
             maskClosable={true}
             styles={{
-                content: {padding: 10}
+                content: { padding: 10 }
             }}
             open={open}
             onCancel={() => setOpen(false)}
-            onClose={() => setOpen(false)}
         >
             <Form
                 name="basic"
@@ -54,17 +53,17 @@ function Edit({initialValues, onEdited, children}: {
                 <Form.Item
                     label={t('address')}
                     name="wallet"
-                    rules={[{required: true, message: t('addressIsRequired')}]}
+                    rules={[{ required: true, message: t('addressIsRequired') }]}
                 >
-                    <Input disabled/>
+                    <Input disabled />
                 </Form.Item>
 
                 <Form.Item
                     label={t('remark')}
                     name="remark"
-                    rules={[{required: false}]}
+                    rules={[{ required: false }]}
                 >
-                    <Input.TextArea/>
+                    <Input.TextArea />
                 </Form.Item>
 
                 <Form.Item label={null}>

@@ -18,8 +18,10 @@
   },
   "dependencies": {
     "@ahooksjs/use-url-state": "^3.5.1",
+    "@ant-design/icons": "^6.0.0",
     "@kdcloudjs/kdesign": "^1.8.18",
     "@pro/chain": "*",
+    "@pro/hooks": "workspace:*",
     "@pro/ui": "*",
     "@repo/typescript-config": "*",
     "@solana/web3.js": "^2.0.0-rc.1",

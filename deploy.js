@@ -1,4 +1,4 @@
-import {exec} from 'child_process';
+import { exec } from 'child_process';
 
 // 获取命令行参数
 const args = process.argv.slice(2);
@@ -45,8 +45,8 @@ const runCommand = (command) => {
 
 const execute = async () => {
     try {
-        await runCommand('yarn install')
-        await runCommand(`yarn build:${repo}:${env}`)
+        await runCommand('pnpm install')
+        await runCommand(`pnpm build:${repo}:${env}`)
 
 
 
@@ -80,13 +80,13 @@ const execute = async () => {
         // await runCommand(`docker push ${aliyunRegistryTag}`)
 
 
-    //     await runCommand(`
-    //     curl -X PUT \\
-    // -H "Content-Type: application/yaml" \\
-    // -H "Cookie: KuboardUsername=admin; KuboardAccessKey=5t8cfdibws6j.wi436t7c33jyszrj5ahtzctsk4zfpjtf" \\
-    // -d '{"kind":"deployments","namespace":"prod","name":"veogo-site"}' \\
-    // "http://13.250.116.182:18060/kuboard-api/cluster/eks-cn/kind/CICDApi/admin/resource/restartWorkload"
-    //     `)
+        //     await runCommand(`
+        //     curl -X PUT \\
+        // -H "Content-Type: application/yaml" \\
+        // -H "Cookie: KuboardUsername=admin; KuboardAccessKey=5t8cfdibws6j.wi436t7c33jyszrj5ahtzctsk4zfpjtf" \\
+        // -d '{"kind":"deployments","namespace":"prod","name":"veogo-site"}' \\
+        // "http://13.250.116.182:18060/kuboard-api/cluster/eks-cn/kind/CICDApi/admin/resource/restartWorkload"
+        //     `)
 
         // docker tag 2adb8d31d3f6 crpi-yju5wi02oeo074jw.cn-hangzhou.personal.cr.aliyuncs.com/usernx/veogo-web:latest
         // docker push crpi-yju5wi02oeo074jw.cn-hangzhou.personal.cr.aliyuncs.com/usernx/veogo-web:latest

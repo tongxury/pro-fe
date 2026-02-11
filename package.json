@@ -3,25 +3,25 @@
   "private": true,
   "scripts": {
     "------------------": "yoozy-admin",
-    "dev:yoozy-admin": "turbo dev --filter=yoozy-admin",
+    "dev:yoozy-admin": "pnpm --filter yoozy-admin dev",
     "build:yoozy-admin:production": "turbo build:production --filter=yoozy-admin",
     "build:yoozy-admin:test": "turbo build:test --filter=yoozy-admin",
     "deploy:yoozy-admin:production": "node deploy2.js yoozy-admin proj-admin-fe react production auto",
     "deploy:yoozy-admin:test": "node deploy2.js yoozy-admin proj-admin-fe react test test",
     "-----------------": "yoozy-pro",
-    "dev:yoozy-pro": "turbo dev --filter=yoozy-pro",
+    "dev:yoozy-pro": "pnpm --filter yoozy-pro dev",
     "build:yoozy-pro:production": "turbo build:production --filter=yoozy-pro",
     "build:yoozy-pro:test": "turbo build:test --filter=yoozy-pro",
     "deploy:yoozy-pro:production": "node deploy2.js yoozy-pro proj-pro-fe react production auto",
     "deploy:yoozy-pro:test": "node deploy2.js yoozy-pro proj-pro-fe react test test",
     "-": "trade-master-web",
-    "dev:trade-master-web": "turbo dev --filter=trade-master-web",
+    "dev:trade-master-web": "pnpm --filter trade-master-web dev",
     "build:trade-master-web:production": "turbo build:production --filter=trade-master-web",
     "build:trade-master-web:staging": "turbo build:staging --filter=trade-master-web",
     "deploy:trade-master-web:production": "node deploy.js trade-master-web p2 next production 1.0.0",
     "deploy:trade-master-web:staging": "node deploy.js trade-master-web p2 next staging 1.0.0",
     "--": "trade-master",
-    "dev:trade-master": "turbo dev --filter=trade-master",
+    "dev:trade-master": "pnpm --filter trade-master dev",
     "build:trade-master:production": "turbo build:production --filter=trade-master",
     "build:trade-master:staging": "turbo build:staging --filter=trade-master",
     "deploy:trade-master:production": "node deploy.js trade-master p1 react production 1.0.01121105",
@@ -89,9 +89,5 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@1.22.22",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "pnpm@9.5.0"
 }

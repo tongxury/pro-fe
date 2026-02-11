@@ -54,8 +54,8 @@ const runCommand = (command) => {
 
 const execute = async () => {
     try {
-        await runCommand('yarn install')
-        await runCommand(`yarn build:${repo}:${env}`)
+        await runCommand('pnpm install')
+        await runCommand(`pnpm build:${repo}:${env}`)
 
 
         //

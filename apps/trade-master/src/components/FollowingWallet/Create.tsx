@@ -1,16 +1,16 @@
-import {Button, Form, FormProps, Input, message, Modal} from "antd";
-import {useTranslation} from "react-i18next";
-import {cloneElement, ReactElement, ReactNode, useState} from "react";
-import {XFlex} from "@pro/ui";
-import {addFollowingWallet} from "@/api/api.ts";
+import { Button, Form, FormProps, Input, message, Modal } from "antd";
+import { useTranslation } from "react-i18next";
+import { cloneElement, ReactElement, ReactNode, useState } from "react";
+import { XFlex } from "@pro/ui";
+import { addFollowingWallet } from "@/api/api.ts";
 
 
-function Create({onCreated, children}: {
+function Create({ onCreated, children }: {
     onCreated?: () => void,
     children: ReactElement
 }) {
 
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     const [open, setOpen] = useState(false)
 
@@ -37,11 +37,10 @@ function Create({onCreated, children}: {
             closable={false}
             maskClosable={true}
             styles={{
-                content: {padding: 10}
+                content: { padding: 10 }
             }}
             open={open}
             onCancel={() => setOpen(false)}
-            onClose={() => setOpen(false)}
         >
             <Form
                 name="basic"
@@ -52,17 +51,17 @@ function Create({onCreated, children}: {
                 <Form.Item
                     label={t('address')}
                     name="wallet"
-                    rules={[{required: true, message: t('addressIsRequired')}]}
+                    rules={[{ required: true, message: t('addressIsRequired') }]}
                 >
-                    <Input/>
+                    <Input />
                 </Form.Item>
 
                 <Form.Item
                     label={t('remark')}
                     name="remark"
-                    rules={[{required: false}]}
+                    rules={[{ required: false }]}
                 >
-                    <Input.TextArea/>
+                    <Input.TextArea />
                 </Form.Item>
 
                 <Form.Item label={null}>
