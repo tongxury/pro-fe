@@ -12,6 +12,7 @@ import Templates from "@/pages/templates";
 import Credit from "@/pages/credit";
 import AssetEditorPage from "@/pages/asset/edit";
 import AssetDetail from "@/pages/asset/detail/index";
+import Support from "@/pages/support";
 import CreateLayout from "@/pages/create/layout";
 import SegmentReplication from "@/pages/create/segment-replication/index";
 import VideoGeneration from "@/pages/create/video-generation";
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
     {
         path: "/login",
         Component: Login
+    },
+    {
+        path: "/support",
+        Component: Support
     },
     {
         path: "/",
